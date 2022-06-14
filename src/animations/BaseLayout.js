@@ -184,7 +184,7 @@ export function drawSVG(path,time){
 export function hideWelcome(){
     gsap.to('.welcome > *',{
         opacity:0,
-        translateY: -500,
+        translateY: -700,
         duration: 2,
     })
 }
