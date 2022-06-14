@@ -1,0 +1,74 @@
+.poster{
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+.poster hr {
+    margin-top: 50px;
+}
+.poster_title{
+    width: 100%;
+    align-self: flex-end;
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+.poster_title h2{
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: right;
+    text-transform: uppercase;
+}
+.poster_title hr{
+    margin-top: 0;
+}
+.poster_title h3{
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+.poster_main{
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+.poster_main .img-holder{
+    overflow: hidden;
+    width: 970px;
+    height: 740px;
+    float: right;
+}
+.poster_main .img-holder img{
+    width: 100%;
+    height: auto;
+}
+.poster_main .poster_main__label{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5%;
+}
+.poster_main .poster_main__label span{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 190px;
+    font-family: sans-serif;
+    line-height: 0.75;
+}
+.poster_main .poster_main__label span:nth-child(3){
+    text-transform: lowercase;
+    align-self: end;
+    position: relative;
+    left: 25%;
+}
+.poster__author-info{
+    line-height: 140%;
+    margin: 30px 60px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.poster__author-info .name{
+    font-weight: 400;
+}

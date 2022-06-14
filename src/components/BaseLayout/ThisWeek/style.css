@@ -1,0 +1,17 @@
+
+section.thisWeek{
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-end;
+    width: 90%;
+}
+.thisWeek__title{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+}
+.thisWeek__title h3{
+    font-weight: 600;
+}
