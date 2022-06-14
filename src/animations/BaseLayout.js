@@ -1,4 +1,7 @@
 import {gsap} from "gsap";
+import {Expo} from "gsap/gsap-core";
+import {Power3} from "gsap/gsap-core";
+import {Back} from "gsap/gsap-core";
 
 
 export function animateList(list,items){
@@ -145,4 +148,43 @@ export function card3D(elements){
             });
         })
     }
+}
+export function drawSVG(path,time){
+    const length = document.querySelector(path).getTotalLength();
+    gsap.to(path,{
+        strokeDasharray: length,
+        duration: time,
+        ease: Expo.easeIn,
+        onComplete:()=>{
+            gsap.to(path,{
+                fill: 'white',
+                duration: 3,
+                onComplete: ()=>{
+                    gsap.to(path,{
+                        translateY: -80,
+                        duration: 2,
+                        ease: Power3.easeInOut,
+                        onComplete: ()=>{
+                            gsap.fromTo('.message span',{
+                                opacity: 0,
+                                translateY: 30,
+                            },{
+                                opacity:1,
+                                translateY: 0,
+                                stagger: 0.1,
+                                ease: Back.easeOut.config(1.7),
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    })
+}
+export function hideWelcome(){
+    gsap.to('.welcome > *',{
+        opacity:0,
+        translateY: -500,
+        duration: 2,
+    })
 }

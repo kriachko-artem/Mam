@@ -1,31 +1,24 @@
-import React from "react";
-import './style.css'
-import {Navbar} from "./Navbar/Navbar";
-import {Poster} from "./Poster/Poster";
-import {animateBody, showSection,changeBackground} from "../../animations/BaseLayout";
-import {ThisWeek} from "./ThisWeek/ThisWeek";
-import {useEffect} from "react";
-import {Cursor} from "./Cursor/Cursor";
-import {VisitUs} from "./VisitUs/VisitUs";
-import {Footer} from "./Footer/Footer";
+import React, {useState} from "react";
+import {Welcome} from "./WelcomePage/Welcome";
+import {Sections} from "./Sections";
+import {hideWelcome} from "../../animations/BaseLayout";
+
+
 
 export function BaseLayout () {
 
 
-    useEffect(() => {
-        changeBackground()
-        window.addEventListener('scroll',showSection)
-        animateBody()
-    }, []);
+    const [isWelcome,setIsWelcome] = useState(true)
+    async function showPage(){
+        hideWelcome()
+        setTimeout(()=>{setIsWelcome(false)},2000)
+
+    }
+
 
   return (
-      <div className="wrapper">
-          <Navbar/>
-          <Poster/>
-          <ThisWeek/>
-          <VisitUs/>
-          <Footer/>
-          <Cursor/>
-      </div>
+      <>
+        {isWelcome? <Welcome onClick={showPage}/>: <Sections/>}
+      </>
   )
 }
