@@ -1,7 +1,6 @@
 import {gsap} from "gsap";
 import {Expo} from "gsap/gsap-core";
-import {Power3} from "gsap/gsap-core";
-import {Back} from "gsap/gsap-core";
+import {Power3,Power2, Back} from "gsap/gsap-core";
 
 
 export function animateList(list,items){
@@ -186,5 +185,6 @@ export function hideWelcome(){
         opacity:0,
         translateY: -700,
         duration: 2,
+        ease: Power2.easeIn,
     })
 }
