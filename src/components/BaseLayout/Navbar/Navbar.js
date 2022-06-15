@@ -6,6 +6,7 @@ import {sidebarData} from "../../../Data/mamalbury.data";
 import {gsap} from "gsap";
 import CustomEase from "gsap/CustomEase";
 import {setBigCursor} from "../../../animations/BaseLayout";
+import {Progress} from "../../Progress/Progress";
 
 
 export function Navbar () {
@@ -47,6 +48,7 @@ export function Navbar () {
   return (
           <nav className={'header-navbar'}>
               <NavbarLinks links={sidebarData} setMenu={handleChangeMenu}/>
+              <Progress/>
               {menu? <Sidebar list={menu} closeSidebar={closeSidebar}/> : null}
           </nav>
   )
