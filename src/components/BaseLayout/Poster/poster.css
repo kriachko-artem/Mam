@@ -13,12 +13,16 @@
     align-self: flex-end;
     margin-bottom: 60px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
 }
-.poster_title h2{
-    font-weight: 400;
+.poster_title .logo{
+    align-self: flex-end;
+    width: 120px;
     margin-bottom: 15px;
-    text-align: right;
-    text-transform: uppercase;
+}
+.poster_title .logo img{
+    width: 100%;
 }
 .poster_title hr{
     margin-top: 0;
@@ -42,25 +46,25 @@
 .poster_main .img-holder img{
     width: 100%;
     height: auto;
+    filter: grayscale(1);
 }
 .poster_main .poster_main__label{
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 5%;
+    left: 10%;
 }
 .poster_main .poster_main__label span{
     text-transform: capitalize;
     font-weight: 600;
-    font-size: 190px;
+    font-size: 140px;
     font-family: sans-serif;
-    line-height: 0.75;
+    line-height: .8;
 }
 .poster_main .poster_main__label span:nth-child(3){
-    text-transform: lowercase;
     align-self: end;
     position: relative;
-    left: 25%;
+    left: 15%;
 }
 .poster__author-info{
     line-height: 140%;

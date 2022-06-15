@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
-import desert from './images/3c2315923ab48c5b4a3cdcee7821ee071c3fd5e8-5400x1997.png'
+import poster from './images/poster.jpg'
 import './poster.css'
 import {gsap} from "gsap";
+import logo from './images/logo.png'
 
 export function Poster () {
 
@@ -9,9 +10,13 @@ export function Poster () {
         posterMainImage,
         posterTitle,
         posterMain,
-        startPosition
+        startPosition,
+        today;
+
+    today = new Date()
 
     useEffect(()=>{
+        console.log(today.getDate())
 
         posterMain = document.querySelector('.poster_main')
         posterMainTitle = document.querySelector('.poster_main__label');
@@ -44,29 +49,30 @@ export function Poster () {
           <section className="poster">
               <div className="container">
               <div className="poster_title">
-                  <h2>Murray art museum gallery</h2>
+                  <div className="logo">
+                      <img src={logo} alt="AK"/>
+                  </div>
                   <hr/>
-                  <h3>26 February 2022-5 June 2022</h3>
-                  <span>Exhibitions</span>
+                  <h3>Today!</h3>
               </div>
               <div className="poster_main">
                   <div className="img-holder">
-                      <img src={desert} alt="Desert"/>
+                      <img src={poster} alt="Poster"/>
                   </div>
                   <h2 className={'poster_main__label'}>
-                      <span>National</span>
-                      <span>photo</span>
-                      <span>graphy</span>
-                      <span>prize</span>
+                      <span>Front End</span>
+                      <span>Developer</span>
+                      <span>Artem</span>
+                      <span>Kriachko</span>
                   </h2>
                   <hr/>
               </div>
               <div className="poster__author-info">
-                  <span className={'name'}>Amos Gebhardt,</span>
-                  <span><i>Eric,</i> (triptych), 2020,</span>
-                  <span>Archival inkjet pigment print. 95 x 245cm</span>
-                  <span>framed size.</span>
-                  <span>Image courtesy of the artist.</span>
+                  <span className={'name'}>Hello!</span>
+                  <span>I'm Frontend developer with experience of</span>
+                  <span>developing professional HTML</span>
+                  <span>Responsive Landing pages and Custom Websites.</span>
+                  <span>I'm looking for a long-term relationship with the employer.</span>
               </div>
               </div>
           </section>

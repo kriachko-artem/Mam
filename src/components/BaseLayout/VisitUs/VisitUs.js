@@ -16,7 +16,7 @@ export function VisitUs () {
     },[])
 
   return (
-      <section className={'visit-us'}>
+      <section className={'visitUs'}>
         <hr/>
           <div className="visit-us_content">
               <h2 className="visit-us_content__tittle">Visit Us</h2>

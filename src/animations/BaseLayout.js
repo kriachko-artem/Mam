@@ -1,6 +1,5 @@
 import {gsap} from "gsap";
-import {Expo} from "gsap/gsap-core";
-import {Power3,Power2, Back} from "gsap/gsap-core";
+import {Expo, Power3,Power2, Back} from "gsap/gsap-core";
 
 
 export function animateList(list,items){
@@ -39,7 +38,7 @@ export function changeBackground(){
                     .setProperty('--main-bg-color', 'black');
                 document.documentElement.style
                     .setProperty('--main-text-color', 'white');
-            }else if(window.pageYOffset + window.innerHeight > sectionsPositionsY.thisWeek + 50){
+            }else if(window.pageYOffset + window.innerHeight > sectionsPositionsY.visitUs + 50){
                 document.documentElement.style
                     .setProperty('--main-bg-color', 'white');
                 document.documentElement.style
@@ -157,7 +156,8 @@ export function drawSVG(path,time){
         onComplete:()=>{
             gsap.to(path,{
                 fill: 'white',
-                duration: 3,
+                duration: 2,
+                ease: Expo.easeIn,
                 onComplete: ()=>{
                     gsap.to(path,{
                         translateY: -80,

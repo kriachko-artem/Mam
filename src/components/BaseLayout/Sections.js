@@ -21,8 +21,8 @@ export function Sections () {
         <div className="wrapper">
             <Navbar/>
             <Poster/>
-            <ThisWeek/>
             <VisitUs/>
+            <ThisWeek/>
             <Footer/>
             <Cursor/>
         </div>
