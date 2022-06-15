@@ -25,62 +25,66 @@ export function ThisWeekSlider () {
   })
 
   return (
-      <Slider {...settings}>
-        <div className={'slider-item'}>
-            <a href="">
-                <div className="image-holder">
-                    <img src={screenOne} alt="gut_feeling"/>
+      <>
+          <div className="thisWeek_slider">
+              <Slider {...settings}>
+                  <div className={'slider-item'}>
+                    <a href="">
+                        <div className="image-holder">
+                            <img src={screenOne} alt="gut_feeling"/>
+                        </div>
+                        <h3>
+                            <span className={'slider-item__tittle'}>Gut Feeling</span>
+                            <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
+                        </h3>
+                    </a>
                 </div>
-                <h3>
-                    <span className={'slider-item__tittle'}>Gut Feeling</span>
-                    <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
-                </h3>
-            </a>
-        </div>
-        <div className={'slider-item'}>
-            <a href="">
-                <div className="image-holder">
-                    <img src={screenTwo} alt="Wonder_Cupboards"/>
+                <div className={'slider-item'}>
+                    <a href="">
+                        <div className="image-holder">
+                            <img src={screenTwo} alt="Wonder_Cupboards"/>
+                        </div>
+                  <h3>
+                      <span className={'slider-item__tittle'}>Gut Feeling</span>
+                      <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
+                    </h3>
+                    </a>
                 </div>
-          <h3>
-              <span className={'slider-item__tittle'}>Gut Feeling</span>
-              <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
-            </h3>
-            </a>
-        </div>
-       <div className={'slider-item'}>
-           <a href="">
-               <div className="image-holder">
-                    <img src={screenThree} alt="National_Photography"/>
-               </div>
-          <h3>
-              <span className={'slider-item__tittle'}>Gut Feeling</span>
-              <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
-            </h3>
-           </a>
-        </div>
-        <div className={'slider-item'}>
-            <a href="">
-                <div className="image-holder">
-                    <img src={screenFour} alt="Sketch"/>
+               <div className={'slider-item'}>
+                   <a href="">
+                       <div className="image-holder">
+                            <img src={screenThree} alt="National_Photography"/>
+                       </div>
+                  <h3>
+                      <span className={'slider-item__tittle'}>Gut Feeling</span>
+                      <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
+                    </h3>
+                   </a>
                 </div>
-          <h3>
-              <span className={'slider-item__tittle'}>Gut Feeling</span>
-              <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
-            </h3>
-            </a>
-        </div>
-        <div className={'slider-item'}>
-          <a href="">
-              <div className="image-holder">
-                  <img src={screenFive} alt="Sketch"/>
-              </div>
-              <h3>
-                  <span className={'slider-item__tittle'}>Gut Feeling</span>
-                  <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
-              </h3>
-          </a>
-        </div>
-      </Slider>
+                <div className={'slider-item'}>
+                    <a href="">
+                        <div className="image-holder">
+                            <img src={screenFour} alt="Sketch"/>
+                        </div>
+                  <h3>
+                      <span className={'slider-item__tittle'}>Gut Feeling</span>
+                      <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
+                    </h3>
+                    </a>
+                </div>
+                <div className={'slider-item'}>
+                  <a href="">
+                      <div className="image-holder">
+                          <img src={screenFive} alt="Sketch"/>
+                      </div>
+                      <h3>
+                          <span className={'slider-item__tittle'}>Gut Feeling</span>
+                          <span>15 October 2021-19 June 2022, Exhibitions, Free</span>
+                      </h3>
+                  </a>
+                </div>
+              </Slider>
+          </div>
+      </>
   )
 }

@@ -47,9 +47,11 @@ export function Navbar () {
     }
   return (
           <nav className={'header-navbar'}>
-              <NavbarLinks links={sidebarData} setMenu={handleChangeMenu}/>
-              <Progress/>
-              {menu? <Sidebar list={menu} closeSidebar={closeSidebar}/> : null}
+              <div className="container">
+                  <NavbarLinks links={sidebarData} setMenu={handleChangeMenu}/>
+                  <Progress/>
+                  {menu? <Sidebar list={menu} closeSidebar={closeSidebar}/> : null}
+              </div>
           </nav>
   )
 }

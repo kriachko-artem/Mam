@@ -1,11 +1,12 @@
 import React from "react";
 import {ThisWeekSlider} from "./Slider/ThisWeekSlider";
-import './style.css'
+import './thisWeek.css'
 import JulietteLogo from './images/Juliette-logo.png'
 
 export function ThisWeek () {
   return (
           <section className={'thisWeek'}>
+              <div className="container">
                   <div className={'thisWeek__title'}>
                        <div className="project-name">
                            <img src={JulietteLogo} alt="Juliette Julia"/>
@@ -13,6 +14,7 @@ export function ThisWeek () {
                       <hr/>
                   </div>
                   <ThisWeekSlider/>
+              </div>
           </section>
   )
 }
